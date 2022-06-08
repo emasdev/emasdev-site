@@ -1,4 +1,4 @@
-import { Box, Flex, Grid, Heading, HStack, VStack, Text, UnorderedList, ListItem, SimpleGrid, Center, useDisclosure, Button } from '@chakra-ui/react'
+import { Box, Flex, Grid, Heading, HStack, VStack, Text, UnorderedList, ListItem, SimpleGrid, Center, useDisclosure, Button, Container } from '@chakra-ui/react'
 import React from 'react'
 import { ColorModeSwitcher } from '../ColorModeSwitcher'
 import { CardComponent, CardComponent2 } from '../components/CardComponent'
@@ -28,7 +28,7 @@ export default function HomePage() {
   const buttonProps = getButtonProps()
   const disclosureProps = getDisclosureProps()
   return (
-    <Box height={"100vh"}>
+    <Container>
       <Center paddingY={4} fontSize="xl">
         <Heading>
           Emas Dev
@@ -56,12 +56,6 @@ export default function HomePage() {
 
       </Box>
 
-
-
-
-
-
-
-    </Box>
+    </Container>
   )
 }
