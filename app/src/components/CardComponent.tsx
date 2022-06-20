@@ -1,10 +1,14 @@
-import { Box, Center, Flex, Text } from '@chakra-ui/react'
+import { Box, Center, Flex, Text, VStack } from '@chakra-ui/react'
 import React from 'react'
 
 type CardProps = {
   titulo: string,
 }
 
+type AppCardProps = {
+  titulo: string,
+  desc: String
+}
 export function CardComponent({ titulo }: CardProps) {
   return (
     <Center
@@ -29,6 +33,23 @@ export function CardComponent2({ titulo }: CardProps) {
       borderRadius={"md"}
     >
       <Text fontSize={'large'} fontWeight={"bold"}>{titulo}</Text>
+    </Center>
+  )
+}
+
+export function AppComponent({ titulo, desc }: AppCardProps) {
+  return (
+    <Center
+      padding={5}
+      textAlign={"center"}
+      bgColor={"#e8d8a6"}
+      color={"#505050"}
+      borderRadius={"md"}
+    >
+      <VStack>
+        <Text fontSize={'large'} fontWeight={"bold"}>{titulo}</Text>
+        <Text>{desc}</Text>
+      </VStack>
     </Center>
   )
 }
